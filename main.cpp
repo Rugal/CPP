@@ -9,53 +9,36 @@
 
 using namespace std;
 
-void testInt()
-{
-    int data = 136;
-    int *p = &data;
-    //--------------------------
-    cout<<&p<<endl;
-    cout<<p<<endl;
-    cout<<*p<<endl;
-    cout<<&data<<endl;
-    cout<<data<<endl;
-    //cout<<*data<<endl;  //why?
-}
-
-void testArray()
-{
-    int array[] = {7,8,9,10};
-    int *p = &array;
-    //--------------------------
-    cout<<array[0]<<endl;
-    cout<<p+1<<endl;
-    cout<<array+2<<endl;
-    //--------------------------
-    p = &array[2];
-    cout<<p+1<<endl;
-    //cout<<p+2<<endl;  why?
-}
-
-void testFunction(int data, int* pdata)
-{
-    data = 0;
-    *pdata = 9;
-    pdata = &data;
-    *pdata = 8;
-}
-
 /*
  * 
  */
 int main(int argc, char** argv)
 {
-    testInt();
-    testArray();
-    //---------------------------
-    int anyNameYouWant = 123;
-    cout<<anyNameYouWant<<endl;
-    testFunction(anyNameYouWant, &anyNameYouWant);
-    cout<<anyNameYouWant<<endl;
+    //input mark data of 5 students
+    //in format:   name mark
+    //the mark range from 0 to 100
+    //after finishing input, please print the grade of these student in table
+    //A[90,100], B[80,90), C[70,80), D[60,70), F[0, 60)
+    //and their average mark
+    /*
+    input:
+    
+    Rugal 100
+    Bernstein 90
+    Tenjin 80
+    Ryujin 30
+    Adelheid 67
+    
+    output:
+    
+    Rugal A 100
+    Bernstein A 90
+    Tenjin B 80
+    Ryujin F 30
+    Adelheid D 67
+    
+    Their average mark is: 73.4
+    */
     return 0;
 }
 
